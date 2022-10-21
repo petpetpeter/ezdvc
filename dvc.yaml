@@ -5,3 +5,10 @@ stages:
     - studentpredictor/create_dataset.py
     outs:
     - assets/data
+  feature:
+    cmd: python studentpredictor/create_features.py
+    deps:
+    - assets/data
+    - studentpredictor/create_features.py
+    outs:
+    - assets/features

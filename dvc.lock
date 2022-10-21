@@ -11,3 +11,18 @@ stages:
       md5: 5f2f16d08bc79a25938a066446b8e989.dir
       size: 694076
       nfiles: 2
+  feature:
+    cmd: python studentpredictor/create_features.py
+    deps:
+    - path: assets/data
+      md5: 5f2f16d08bc79a25938a066446b8e989.dir
+      size: 694076
+      nfiles: 2
+    - path: studentpredictor/create_features.py
+      md5: 9915199d9dc69f3cbe415099fd1b22d6
+      size: 968
+    outs:
+    - path: assets/features
+      md5: e23c71f65b6247f58eb66a9b6032fdee.dir
+      size: 75227
+      nfiles: 4
