@@ -12,3 +12,19 @@ stages:
     - studentpredictor/create_features.py
     outs:
     - assets/features
+  train:
+    cmd: python studentpredictor/train_model.py
+    deps:
+    - assets/features
+    - studentpredictor/train_model.py
+    outs:
+    - assets/models
+  evaluate:
+    cmd: python studentpredictor/evaluate_model.py
+    deps:
+    - assets/features
+    - assets/models
+    - studentpredictor/evaluate_model.py
+    metrics:
+    - assets/metrics.json:
+        cache: false
