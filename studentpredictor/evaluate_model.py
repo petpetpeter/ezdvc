@@ -11,3 +11,5 @@ y_pred = model.predict(X_test)
 rmse = mean_squared_error(y_test, y_pred)
 with open(str(Config.METRICS_FILE_PATH), "w") as outfile:
     json.dump(dict(r_squared=r_squared, rmse=rmse), outfile)
+
+
