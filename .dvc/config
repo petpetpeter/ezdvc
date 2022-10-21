@@ -1,0 +1,4 @@
+[core]
+    remote = bikes
+['remote "bikes"']
+    url = azure://bikedata
